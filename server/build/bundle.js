@@ -7054,7 +7054,7 @@ var app = (0, _express2.default)();
 app.use(_express2.default.static("public"));
 app.get("/", function (req, res) {
   var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
-  var html = "\n  <!DOCTYPE html>\n  <html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n    <title>Document</title>\n  </head>\n  <body>\n    <div>" + content + "</div>\n    <script src=\"bundle.js\"></script>\n  </body>\n  </html>\n  ";
+  var html = "\n  <!DOCTYPE html>\n  <html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n    <title>Document</title>\n  </head>\n  <body>\n    <div id=\"root\">" + content + "</div>\n    <script src=\"bundle.js\"></script>\n  </body>\n  </html>\n  ";
   res.send(html);
 });
 app.listen(3000, function () {
@@ -22742,7 +22742,7 @@ var Home = function Home() {
     _react2.default.createElement(
       "button",
       { onClick: function onClick() {
-          return console.log("clciked me");
+          return console.log("clicked me");
         } },
       "Click Me!!"
     )
